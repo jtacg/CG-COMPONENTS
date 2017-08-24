@@ -5,7 +5,7 @@ import { HttpClient }        from '@angular/common/http';
 @Component({
   selector: 'app-print-form',
   templateUrl: './print-form.component.html',
-  styleUrls: ['./print-form.component.css']
+  styleUrls: ['./print-form.component.scss']
 })
 
 export class PrintFormComponent implements OnInit {

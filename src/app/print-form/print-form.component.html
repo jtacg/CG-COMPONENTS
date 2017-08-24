@@ -2,7 +2,7 @@
   <h3>This page is used to demo the ability to print web forms into a usable print format including page titles, margins, page numbers and page breaks.</h3>
 </div>
 
-<div class="incomming-rollover-request">
+<div id="incomming-rollover-request">
   <div class="header">
     <div>[ Logo ]</div>
     <h2>Incoming Rollover Request</h2>
@@ -12,9 +12,15 @@
   <div id="form-participant-info">
     <hr>
     <h3 class="section"><span>1</span> Participant information</h3>
+
     <p>Please type or print clearly.</p>
-    <label for="plan-name">Name of plan accepting rollover</label> <input id="plan-name" type="text">
-    <label for="plan-id">Plan ID number</label><input id="plan-id" type="text"><br>
+
+    <div class="row">
+      <label for="plan-name">Name of plan accepting rollover <input id="plan-name" type="text"></label>
+      <label for="plan-id">Plan ID number<input id="plan-id" type="text"></label>
+    </div>
+
+    <br>
     <label for="first-name">First name of participant</label><input id="first-name" type="text">
     <label for="mi-name">MI</label><input id="mi-name" type="text">
     <label for="last-name">Last</label><input id="last-name" type="text">

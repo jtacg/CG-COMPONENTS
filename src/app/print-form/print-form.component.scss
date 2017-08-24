@@ -1,0 +1,64 @@
+
+#incomming-rollover-request {
+  background-color: #FFF;
+  border-radius: 2px;
+  box-shadow: 0px 2px 1px 0px #DDD;
+  box-sizing: border-box;
+  margin: 50px 0 0 50px;
+  position: absolute;
+  top: 50%;
+  width: 80%;
+}
+
+#plan-name {
+  width: 400px;
+}
+
+.header h2 {
+  text-align: right;
+}
+.section {
+  font-size: 1.5em;
+}
+
+.section span {
+  font-size: 2em;
+}
+
+hr {
+  color: solid black 2px;
+  marign-top: 2em;
+}
+
+h3 {
+  margin: 0;
+}
+
+input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #CCC;
+  color: #555;
+  box-sizing: border-box;
+  font-family: 'Arvo';
+  font-size: 18px;
+  padding: 5px 0px;
+  width: 200px;
+  left:auto;
+  display: inline-block;
+  width: 6em;
+  position: relative;
+  top: -3em;
+}
+
+input::-webkit-input-placeholder {
+  color: #AAA;
+}
+
+input:focus::-webkit-input-placeholder {
+  color: dodgerblue;
+}
+
+label {
+    display: inline-block;
+}
