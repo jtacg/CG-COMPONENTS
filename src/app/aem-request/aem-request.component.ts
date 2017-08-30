@@ -7,7 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { Observable }  from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
-import { SafeHtmlPipe } from '../safe-html.pipe';
+import { SafeHtmlPipe } from '../safe-html/safe-html.pipe';
 
 
 @Component({
