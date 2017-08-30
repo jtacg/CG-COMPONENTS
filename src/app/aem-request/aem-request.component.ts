@@ -1,9 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { NgComponentOutlet } from '@angular/common';
+import { BrowserModule, DomSanitizer } from '@angular/platform-browser'
 //import { AemService } from '../services/aem.service';
 import { HttpClient }  from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 import { Observable }  from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
+
+import { SafeHtmlPipe } from '../safe-html.pipe';
+
 
 @Component({
   selector: 'app-aem-request',
@@ -18,7 +23,8 @@ export class AemRequestComponent implements OnInit {
   //private url = `https://l0165075:23943/advisor/service/contribute/ov/traditional-ira-contributions.brief.html`;
   //https://www.stg.americanfunds.com/content/sites/american-funds/individual/us/en/fragments/capital-gains-2014.modal.html
   //https://www.stg.americanfunds.com/content/sites/american-funds/individual/us/en/fragments/open-an-account.modal.html
-  public data = {}
+  data: string;
+  title = "Welcome";
 
   constructor(
     private http: HttpClient,
@@ -38,6 +44,4 @@ export class AemRequestComponent implements OnInit {
       }
     )
   }
-
-
 }
