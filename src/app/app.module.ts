@@ -1,4 +1,4 @@
-import { NgModule }                from '@angular/core';
+import { NgModule, Pipe, PipeTransform }                from '@angular/core';
 import { BrowserModule }           from '@angular/platform-browser';
 import { RouterModule, Routes }    from '@angular/router';
 import { HttpClientModule }        from '@angular/common/http';
@@ -11,6 +11,7 @@ import { TopNavComponent }         from './top-nav/top-nav.component';
 import { PrintFormComponent }      from './print-form/print-form.component';
 import { BlankPageComponent }      from './blank-page/blank-page.component';
 import { AemRequestComponent }     from './aem-request/aem-request.component';
+import { SafeHtmlPipe }            from './safe-html/safe-html.pipe';
 // import { PostComponent }           from './post/post.component';
 // import { PostListComponent }       from './post-list/post-list.component';
 
@@ -29,7 +30,8 @@ const appRoutes: Routes = [
     TopNavComponent,
     PrintFormComponent,
     BlankPageComponent,
-    AemRequestComponent
+    AemRequestComponent,
+    SafeHtmlPipe,
     //PostComponent,
     //PostListComponent,
   ],

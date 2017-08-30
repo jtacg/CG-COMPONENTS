@@ -1,4 +1,5 @@
-<p>
-  aem-request works!
-</p>
-{{ data }}
+<h1>
+  {{ title }} aem-request component!
+</h1>
+<p>The following content is resourced from an external source AEM!</p>
+<div [innerHtml]="data | safeHtml"></div>
