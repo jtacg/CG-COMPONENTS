@@ -1,5 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div layout="row">
+<div layout="row" id="top-nav">
   <div layout="column"></div>
   <h1>
     Welcome to {{title}}!
@@ -7,5 +7,7 @@
   <p>Below are views to various POC components</p>
   <p>All components are coded using the latest Angular framework.</p>
   <app-top-nav></app-top-nav>
-  <div layout="column"><router-outlet></router-outlet></div>
+  <div layout="column">
+    <router-outlet></router-outlet>
+  </div>
 </div>

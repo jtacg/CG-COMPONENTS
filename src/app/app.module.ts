@@ -4,13 +4,15 @@ import { RouterModule, Routes }    from '@angular/router';
 import { HttpClientModule }        from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { AemService }              from './aem.service';
+//import { AemService }              from './services/aem.service';
 
 import { AppComponent }            from './app.component';
+import { TopNavComponent }         from './top-nav/top-nav.component';
 import { PrintFormComponent }      from './print-form/print-form.component';
 import { BlankPageComponent }      from './blank-page/blank-page.component';
-import { TopNavComponent }         from './top-nav/top-nav.component';
 import { AemRequestComponent }     from './aem-request/aem-request.component';
+// import { PostComponent }           from './post/post.component';
+// import { PostListComponent }       from './post-list/post-list.component';
 
 
 const appRoutes: Routes = [
@@ -18,15 +20,18 @@ const appRoutes: Routes = [
   { path: 'blank-page', component: BlankPageComponent },
   { path: 'aem-request', component: AemRequestComponent },
   { path: 'print-form', component: PrintFormComponent }
+  //{ path: 'post-component', component: PostComponent }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
+    TopNavComponent,
     PrintFormComponent,
     BlankPageComponent,
-    TopNavComponent,
-    AemRequestComponent,
+    AemRequestComponent
+    //PostComponent,
+    //PostListComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,7 +43,7 @@ const appRoutes: Routes = [
     BrowserAnimationsModule
   ],
   providers: [
-    AemService
+    //AemService
   ],
   bootstrap: [AppComponent]
 })

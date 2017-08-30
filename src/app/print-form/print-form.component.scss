@@ -10,8 +10,16 @@
   width: 80%;
 }
 
+#form-participant-info {
+
+}
+
 #plan-name {
-  width: 400px;
+  width: 18em;
+}
+
+#plan-id {
+  width: 8em;
 }
 
 .header h2 {
@@ -47,7 +55,7 @@ input {
   left:auto;
   display: inline-block;
   width: 6em;
-  position: relative;
+  position: inherit;
   top: -3em;
 }
 
