@@ -1,0 +1,20 @@
+
+<blockquote>
+  <p>The following content is resourced from an external source AEM!</p>
+</blockquote>
+
+<div class="book">
+  <div class="page print">
+    <h1>{{ title }}</h1>
+
+    <div class="row">
+      <div class="col left-col">
+        <p>Your retirement plan is one of the most important benefits your employer offers you. Discover the potential advantages of contributing to your plan:</p>
+      </div>
+      <div class="col right-col" id="plan-advantages">
+        <ng-container *ngFor="let content of pageContent">
+          <div class="component" [innerHtml]="content | safeHtml"></div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
