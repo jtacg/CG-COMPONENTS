@@ -1,109 +1,115 @@
 
-<div>
-  <h3>This page is used to demo the ability to print web forms into a usable print format including page titles, margins, page numbers and page breaks.</h3>
-</div>
-  <div id="print-section">
-  <div class="page">This page is intentionally left blank.</div>
+<blockquote>
+  <p>This page is used to demo the ability to print web forms into a usable print format including page titles, margins, page numbers and page breaks.<p>
+</blockquote>
+
+<div id="print-section">
+  <div class="page blank">
+    <p>This page is intentionally left blank.</p>
+  </div>
   <div id="incomming-rollover-request">
-    <div class="header">
-      <div>[ Logo ]</div>
-      <h2>Incoming Rollover Request</h2>
-    </div>
-    <p>Participant: Once this form is signed by your Employer, keep a copy and attach it to any additional paperwork that may be required by the financial institution holding the assets you want sent to American Funds. Assets received will be invested in accordance
-      with the investment allocations on file with American Funds or the plan’s default investment option if you have not made your own investment selection.</p>
-    <div id="form-participant-info">
-      <hr>
-      <h3 class="section"><span>1</span> Participant information</h3>
-
-      <p>Please type or print clearly.</p>
-
-      <div class="row">
-        <label for="plan-name">Name of plan accepting rollover <input id="plan-name" type="text"></label>
-        <label for="plan-id">Plan ID number<input id="plan-id" type="text"></label>
+    <div class="page">
+      <div class="header">
+        <div>[ Logo ]</div>
+        <h2>Incoming Rollover Request</h2>
       </div>
+      <p>Participant: Once this form is signed by your Employer, keep a copy and attach it to any additional paperwork that may be required by the financial institution holding the assets you want sent to American Funds. Assets received will be invested
+        in accordance with the investment allocations on file with American Funds or the plan’s default investment option if you have not made your own investment selection.</p>
+      <div id="form-participant-info">
+        <hr>
+        <h3 class="section"><span>1</span> Participant information</h3>
 
-      <br>
-      <label for="first-name">First name of participant</label><input id="first-name" type="text">
-      <label for="mi-name">MI</label><input id="mi-name" type="text">
-      <label for="last-name">Last</label><input id="last-name" type="text">
-      <label for="ssn">SSN(provide the last four digits - required)</label><input id="ssn" type="text"><br>
-      <label for="address">Mailing address</label><input id="address" type="text">
-      <label for="city">City</label><input id="city" type="text">
-      <label for="state">State</label><input id="state" type="text">
-      <label for="zip">ZIP</label><input id="zip" type="text"><br>
-      <label for="phone">Daytime phone</label><input id="phone" type="text">
-      <label for="ext">Ext.</label><input id="ext" type="text">
-      <label for="fax">Fax</label><input id="fax" type="text">
-    </div>
-    <div id="send-account-info">
-      <hr>
-      <h3 class="section"><span>2</span> Sending account information (required)</h3>
-      <p></p>
-      <label for="financial-institution-name">Name of sending financial institution/trustee</label> <input id="plan-name" type="text">
-      <h4>A. Cost basis information</h4>
-      <p>Are any of the rollover assets from a Roth 401(k)/403(b)?</p>
-      <label for="a-no">No</label><input id="a-no" type="checkbox">
-      <label for="a-yes">Yes</label><input id="a-yes" type="checkbox">
-      <p>If yes, complete the requested information below.</p>
-      <label for="cost-basis">Cost basis</label> $<input id="cost-basis" type="text"><br>
-      <label for="earnings">Earnings</label> $<input id="earnings" type="text">
-      <label for="roth-start-date">Roth start date (mm/dd/yyyy)</label> $<input id="roth-start-date" type="text">
+        <p>Please type or print clearly.</p>
 
-      <p>Are any of the rollover assets voluntary after-tax funds?</p>
-      <label for="a-no-2">No</label><input id="a-no-2" type="checkbox">
-      <label for="a-yes-2">Yes</label><input id="a-yes-2" type="checkbox">
-      <p>If yes, specify the cost basis and earnings below.</p>
-      <label for="cost-basis-2">Cost basis</label> $<input id="cost-basis-2" type="text"><br>
-      <label for="earnings-2">Earnings</label> $<input id="earnings-2" type="text">
+        <div class="row">
+          <label for="plan-name">Name of plan accepting rollover <input id="plan-name" type="text"></label>
+          <label for="plan-id">Plan ID number<input id="plan-id" type="text"></label>
+        </div>
 
-      <h4>B. Related rollover information</h4>
-      <p>Is this a related rollover?</p>
-      <label for="b-no">No</label><input id="b-no" type="checkbox">
-      <label for="b-yes">Yes</label><input id="b-yes" type="checkbox">
-      <p>(RecordkeeperDirect will invest as an <strong>unrelated</strong> rollover unless otherwise selected.)</p>
-
-      <strong>Notes:</strong>
-      <ul>
-        <li>A rollover is considered “unrelated” if it is initiated by the employee and made from a plan maintained by one employer to a plan maintained by another employer.</li>
-        <li>A rollover is considered “related” if it is not initiated by the employee or if it is made to a plan maintained by the same employer.</li>
-        <li>All companies in a controlled group or affiliated service group (refer to Internal Revenue Code sections 414(b), (c) or (m)) are considered to be the same employer for this purpose.</li>
-      </ul>
-
-      <h4>C. Pay order instructions</h4>
-      <p>Instruct the sending financial institution/trustee to make the rollover check payable as follows:</p>
-      <p>Capital Bank and Trust Company<br> FBO (name of participant)<br> Plan ID – IRK###### or BRK######</p>
-    </div>
-    <div id="participant-authorization">
-      <hr>
-      <h3 class="section"><span>3</span> Participant authorization</h3>
-      <p>I hereby certify that the information I’ve provided in Sections 1 and 2 is accurate. I understand that the sending financial institution/trustee of the rollover assets may have additional requirements to initiate the rollover to American Funds and
-        I am responsible for meeting these requirements.</p>
-      <p>To the sending financial institution/trustee: I have established a retirement account with Capital Bank and Trust Company.SM Liquidate my account and process a direct rollover to my employer’s retirement plan with American Funds.</p>
-      <label for='employee-signature'>Signature of employee</label><input type="text" id="employee-signature">
-      <label for="date">Date (mm/dd/yyyy)</label><input type="text" id="date">
-    </div>
-    <div id="sponsor-authorization">
-      <hr>
-      <h3 class="section"><span>4</span> Plan sponsor authorization</h3>
-      <p>I hereby certify that I have reasonably concluded that the rollover check for the participant identified above is a valid rollover contribution (Pursuant to Treas. Reg. Section 1.401(a)(31)-1) and acceptable under the terms of the plan. If the recordkeeping
-        system does not currently show the requested rollover type as available under the terms of the plan, this form serves as authorization to update the plan’s records accordingly.</p>
-      <label for='sponsor-name'>Name of authorized plan signer or TPA (print)</label><input type="text" id="sponsor-name">
-      <label for='sponsor-signature'>Signature of authorized plan signer or TPA (The participant should NOT sign this form.)</label><input type="text" id="sponsor-signature">
-      <label for="sponsor-date">Date (mm/dd/yyyy)</label><input type="text" id="sponsor-date">
-
-      <p><strong>Plan Sponsor: When completed, mail or fax this form to the address or fax number below. Please provide a copy to the participant. Do not submit this form until the participant’s account has been established on the recordkeeping system.</strong></p>
-    </div>
-    <div id="custodial-acceptance">
-
-      <div>
-        <p>DO NOT WRITE BELOW THIS LINE. CB&amp;T WILL COMPLETE THIS SECTION.</p>
+        <br>
+        <label for="first-name">First name of participant</label><input id="first-name" type="text">
+        <label for="mi-name">MI</label><input id="mi-name" type="text">
+        <label for="last-name">Last</label><input id="last-name" type="text">
+        <label for="ssn">SSN(provide the last four digits - required)</label><input id="ssn" type="text"><br>
+        <label for="address">Mailing address</label><input id="address" type="text">
+        <label for="city">City</label><input id="city" type="text">
+        <label for="state">State</label><input id="state" type="text">
+        <label for="zip">ZIP</label><input id="zip" type="text"><br>
+        <label for="phone">Daytime phone</label><input id="phone" type="text">
+        <label for="ext">Ext.</label><input id="ext" type="text">
+        <label for="fax">Fax</label><input id="fax" type="text">
       </div>
-      <h3 class="section">Plan sponsor authorization</h3>
-      <p>Capital Bank and Trust Company (CB&amp;T) serves as the custodian or trustee for the above referenced plan. CB&amp;T agrees to accept the transferred assets from the sending institution and allocate them to a designated participant account under the plan
-        in accordance with the provisions of the Internal Revenue Code on the condition that the funds are eligible to be rolled over into the plan as evidenced by the Employer’s signature above. If the funds are not eligible for rollover, they will be
-        returned to the sending institution.</p>
-      <label for='custodial-name'>Tom Burfeind, Authorized Signer Signature (Accepting Signer) Capital Bank and Trust Company</label><input type="text" id="custodial-name" value="Tom Burfeind">
-      <label for='custodial-signature'>Signature (Accepting Signer)</label><input type="text" id="custodial-signature">
+      <div id="send-account-info">
+        <hr>
+        <h3 class="section"><span>2</span> Sending account information (required)</h3>
+        <p></p>
+        <label for="financial-institution-name">Name of sending financial institution/trustee</label> <input id="plan-name" type="text">
+        <h4>A. Cost basis information</h4>
+        <p>Are any of the rollover assets from a Roth 401(k)/403(b)?</p>
+        <label for="a-no">No</label><input id="a-no" type="checkbox">
+        <label for="a-yes">Yes</label><input id="a-yes" type="checkbox">
+        <p>If yes, complete the requested information below.</p>
+        <label for="cost-basis">Cost basis</label> $<input id="cost-basis" type="text"><br>
+        <label for="earnings">Earnings</label> $<input id="earnings" type="text">
+        <label for="roth-start-date">Roth start date (mm/dd/yyyy)</label> $<input id="roth-start-date" type="text">
+
+        <p>Are any of the rollover assets voluntary after-tax funds?</p>
+        <label for="a-no-2">No</label><input id="a-no-2" type="checkbox">
+        <label for="a-yes-2">Yes</label><input id="a-yes-2" type="checkbox">
+        <p>If yes, specify the cost basis and earnings below.</p>
+        <label for="cost-basis-2">Cost basis</label> $<input id="cost-basis-2" type="text"><br>
+        <label for="earnings-2">Earnings</label> $<input id="earnings-2" type="text">
+
+        <h4>B. Related rollover information</h4>
+        <p>Is this a related rollover?</p>
+        <label for="b-no">No</label><input id="b-no" type="checkbox">
+        <label for="b-yes">Yes</label><input id="b-yes" type="checkbox">
+        <p>(RecordkeeperDirect will invest as an <strong>unrelated</strong> rollover unless otherwise selected.)</p>
+
+        <strong>Notes:</strong>
+        <ul>
+          <li>A rollover is considered “unrelated” if it is initiated by the employee and made from a plan maintained by one employer to a plan maintained by another employer.</li>
+          <li>A rollover is considered “related” if it is not initiated by the employee or if it is made to a plan maintained by the same employer.</li>
+          <li>All companies in a controlled group or affiliated service group (refer to Internal Revenue Code sections 414(b), (c) or (m)) are considered to be the same employer for this purpose.</li>
+        </ul>
+
+        <h4>C. Pay order instructions</h4>
+        <p>Instruct the sending financial institution/trustee to make the rollover check payable as follows:</p>
+        <p>Capital Bank and Trust Company<br> FBO (name of participant)<br> Plan ID – IRK###### or BRK######</p>
+      </div>
+    </div>
+    <div class="page">
+      <div id="participant-authorization">
+        <hr>
+        <h3 class="section"><span>3</span> Participant authorization</h3>
+        <p>I hereby certify that the information I’ve provided in Sections 1 and 2 is accurate. I understand that the sending financial institution/trustee of the rollover assets may have additional requirements to initiate the rollover to American Funds
+          and I am responsible for meeting these requirements.</p>
+        <p>To the sending financial institution/trustee: I have established a retirement account with Capital Bank and Trust Company.SM Liquidate my account and process a direct rollover to my employer’s retirement plan with American Funds.</p>
+        <label for='employee-signature'>Signature of employee</label><input type="text" id="employee-signature">
+        <label for="date">Date (mm/dd/yyyy)</label><input type="text" id="date">
+      </div>
+      <div id="sponsor-authorization">
+        <hr>
+        <h3 class="section"><span>4</span> Plan sponsor authorization</h3>
+        <p>I hereby certify that I have reasonably concluded that the rollover check for the participant identified above is a valid rollover contribution (Pursuant to Treas. Reg. Section 1.401(a)(31)-1) and acceptable under the terms of the plan. If the
+          recordkeeping system does not currently show the requested rollover type as available under the terms of the plan, this form serves as authorization to update the plan’s records accordingly.</p>
+        <label for='sponsor-name'>Name of authorized plan signer or TPA (print)</label><input type="text" id="sponsor-name">
+        <label for='sponsor-signature'>Signature of authorized plan signer or TPA (The participant should NOT sign this form.)</label><input type="text" id="sponsor-signature">
+        <label for="sponsor-date">Date (mm/dd/yyyy)</label><input type="text" id="sponsor-date">
+
+        <p><strong>Plan Sponsor: When completed, mail or fax this form to the address or fax number below. Please provide a copy to the participant. Do not submit this form until the participant’s account has been established on the recordkeeping system.</strong></p>
+      </div>
+      <div id="custodial-acceptance">
+
+        <div>
+          <p>DO NOT WRITE BELOW THIS LINE. CB&amp;T WILL COMPLETE THIS SECTION.</p>
+        </div>
+        <h3 class="section">Plan sponsor authorization</h3>
+        <p>Capital Bank and Trust Company (CB&amp;T) serves as the custodian or trustee for the above referenced plan. CB&amp;T agrees to accept the transferred assets from the sending institution and allocate them to a designated participant account under
+          the plan in accordance with the provisions of the Internal Revenue Code on the condition that the funds are eligible to be rolled over into the plan as evidenced by the Employer’s signature above. If the funds are not eligible for rollover,
+          they will be returned to the sending institution.</p>
+        <label for='custodial-name'>Tom Burfeind, Authorized Signer Signature (Accepting Signer) Capital Bank and Trust Company</label><input type="text" id="custodial-name" value="Tom Burfeind">
+        <label for='custodial-signature'>Signature (Accepting Signer)</label><input type="text" id="custodial-signature">
+      </div>
     </div>
   </div>
-</div>

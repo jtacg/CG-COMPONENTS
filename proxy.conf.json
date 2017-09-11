@@ -1,0 +1,6 @@
+{
+   "/content": {
+      "target": "http://localhost:4502/",
+      "secure": false
+   }
+}

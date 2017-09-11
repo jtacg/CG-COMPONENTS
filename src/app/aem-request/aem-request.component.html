@@ -1,5 +1,36 @@
-<h1>
-  {{ title }} aem-request component!
-</h1>
-<p>The following content is resourced from an external source AEM!</p>
-<div [innerHtml]="data | safeHtml"></div>
+<blockquote>
+  <p>The following content is resourced from an external source AEM!</p>
+</blockquote>
+
+<div class="book">
+  <div class="page print">
+    <h1>{{ title }} : </h1>
+
+    <div class="row">
+      <div class="col left-col">
+        <p>Your retirement plan is one of the most important benefits your employer offers you. Discover the potential advantages of contributing to your plan:</p>
+      </div>
+      <div class="col right-col" id="plan-advantages">
+        <div class="component">
+          <img class="icon coffee-cup" />
+          <div [innerHtml]="convenience | safeHtml"></div>
+        </div>
+        <div class="component"><img class="icon piggy-bank" />
+          <h2>Growth Potential Over
+the Long Term</h2>
+          <p>The longer you stay invested in the plan, the greater likelihood you’ll have of reaching your retirement goals. That’s because you have the potential to make money on what you’ve invested and on any account earnings.
+          </p>
+        </div>
+        <div class="component"><img class="icon alarm-clock" />
+          <h2>Pretax Contributions</h2>
+          <p>If you contribute $100 from every paycheck, it may cost you only $75 in actual take-home pay because the money is deducted directly from your paycheck before you pay any taxes.†</p>
+          <p><small>† Assuming that you pay 25% in taxes.</small></p>
+        </div>
+        <div class="component"><img class="icon mobile-phone" />
+          <h2>Check Out Your
+Plan’s Website</h2>
+          <p>For a closer look at your plan’s benefits and how they can help you reach your retirement goals, visit americanfunds.com/retire. 2| Visit</p>
+        </div>
+      </div>
+    </div>
+  </div>
