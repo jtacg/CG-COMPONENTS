@@ -7,6 +7,7 @@ export class AemContentResponse {
 
 export class Assets {
   href: string;
+  localpath: string;
   dam: Dam
 }
 
