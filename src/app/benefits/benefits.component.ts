@@ -1,12 +1,15 @@
-import { Component, OnInit, ViewEncapsulation  } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 import { BrowserModule, DomSanitizer } from '@angular/platform-browser'
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { AemContentResponse } from '../models/content';
 
 //import { BenefitsService }   from '../services/benefits.service';
+import { Plan } from '../models/plan';
+import { PlanService } from '../services/plan.service';
 import { LoggerService } from '../services/logger.service';
 import { SafeHtmlPipe } from '../safe-html/safe-html.pipe';
+
 
 @Component({
   selector: 'app-benefits',
@@ -15,42 +18,58 @@ import { SafeHtmlPipe } from '../safe-html/safe-html.pipe';
   encapsulation: ViewEncapsulation.None,
 })
 
+
 export class BenefitsComponent implements OnInit {
-  aemContentResponse = AemContentResponse;
-  //benefitsFrags: BenefitsContent[];
+  private aemContentResponse = AemContentResponse;
   private benefitsUrl = '/content/entities/rp_enroll_svc/benefits.caas.json';
-  title = "Take Advantage of Your Plan’s Benefits";
-  data = []
-  cont = ""
-  pageContentPaths:any = []
-  pageContent:any = []
-  isBusy = false;
+  private title = "Take Advantage of Your Plan’s Benefits";
+  plan: any = []
+  assets: any = []
+  fragments: any = []
+    tag: any = []
+  tags: any = []
+  temp: any = []
+
 
   constructor(
     //private benefitsService: BenefitsService,
+    private planService: PlanService,
     private http: HttpClient,
     private logger: LoggerService
-  ) {}
+  ) { }
 
   ngOnInit() {
+    this.plan = this.planService.plan;
     this.getFragments();
+  }
+
+  buildContent(asset): void {
+    this.http.get(asset["dam.path"], { responseType: 'text' }).subscribe(
+      data => {
+        // Build fragment object with id, content and tags
+        this.http.get(asset["dam.path"] + '/_jcr_content/metadata.caas.json').subscribe(
+          tags => {
+            this.tags = tags["tags"];
+            this.fragments.push({
+              id: asset.localpath.replace('/', ''),
+              content: data,
+              // This generates an error in console. Look for alternatives.
+              tags: this.tags.join(' ')
+            });
+          }
+        )
+      }
+    )
   }
 
   getFragments() {
     this.http.get<AemContentResponse>(this.benefitsUrl).subscribe(
       data => {
-        this.pageContentPaths = data.assets;
-        for (let path of this.pageContentPaths) {
-          console.log(path["dam.path"]);
-          this.http.get(path["dam.path"], {responseType: 'text'}).subscribe(
-            cont => {
-              this.cont = cont;
-              this.pageContent.push(this.cont);
-              console.log(cont);
-            }
-          )
+        this.assets = data.assets;
+        for (let asset of this.assets) {
+          this.buildContent(asset);
         };
-        console.log("Urls to page fragments: " + this.pageContentPaths);
+        console.log(this.fragments);
       },
       //getContent(this.pageContentPaths));
       (err: HttpErrorResponse) => {
@@ -63,9 +82,13 @@ export class BenefitsComponent implements OnInit {
     );
   }
 
+  generateIcon(): void {}
+
+
 
   //TODO
+  // Check meta data tags and match to available icons
   // DONE - Push into content array the response from the path:
-  // Push into content array the metadata for each path
+  // DONE - Push into content array the metadata for each path
 
 }

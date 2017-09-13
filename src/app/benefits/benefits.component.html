@@ -1,20 +1,36 @@
 
 <blockquote>
   <p>The following content is resourced from an external source AEM!</p>
+  <p>Mock plan:
+    Plan name: {{ plan.name }}
+    Advisor: {{ plan.advisor }}
+  Experience: {{ plan.experience }}
+  Type: {{ plan.type }}
 </blockquote>
 
 <div class="book">
   <div class="page print">
     <h1>{{ title }}</h1>
-
     <div class="row">
       <div class="col left-col">
-        <p>Your retirement plan is one of the most important benefits your employer offers you. Discover the potential advantages of contributing to your plan:</p>
+        <div *ngIf="plan.experience == 'wc'; else elseBlock">Experience WhiteCollar - Your retirement plan is one of the most important benefits your employer offers you. Discover the potential advantages of contributing to your plan:</div>
+        <ng-template #elseBlock><p><i>Experience BlueCollar</i>
+           <br> Your retirement plan is one of the most important benefits your employer offers you. Discover the potential advantages of contributing to your plan:</p></ng-template>
       </div>
       <div class="col right-col" id="plan-advantages">
-        <ng-container *ngFor="let content of pageContent">
-          <div class="component" [innerHtml]="content | safeHtml"></div>
-        </ng-container>
+
+          <ng-container *ngFor="let fragment of fragments">
+            <div class="component">
+              <img class="icon {{ fragment.tags }}"/>
+              <div id="{{ fragment.title }}"
+                [innerHtml]="fragment.content | safeHtml">
+              </div>
+              <div><i>TAGS: {{ fragment.tags }}</i></div>
+            </div>
+          </ng-container>
+
+
+
       </div>
     </div>
   </div>

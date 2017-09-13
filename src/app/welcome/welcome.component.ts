@@ -10,11 +10,13 @@ import { PlanService } from '../services/plan.service';
   styleUrls: ['./welcome.component.scss']
 })
 
-export class WelcomeComponent {
+export class WelcomeComponent implements OnInit {
+plan: any = []
   constructor(private planService: PlanService) {}
 
   ngOnInit(): void {
-
+    this.plan = this.planService.plan;
   }
+
 
 }
