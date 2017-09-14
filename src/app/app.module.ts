@@ -7,7 +7,7 @@ import { BrowserModule }           from '@angular/platform-browser';
 import { RouterModule, Routes }    from '@angular/router';
 import { HttpClientModule }          from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { NvD3Module } from 'ng2-nvd3';
 //import { AemService }              from './services/aem.service';
 import { PlanService }              from './services/plan.service';
 import { BenefitsService }              from './services/benefits.service';
@@ -24,6 +24,7 @@ import { AemRequestComponent }     from './aem-request/aem-request.component';
 import { SafeHtmlPipe }            from './safe-html/safe-html.pipe';
 import { WelcomeComponent }        from './welcome/welcome.component';
 import { BenefitsComponent }       from './benefits/benefits.component';
+import { CompoundInterestChartComponent } from './shared/compound-interest-chart/compound-interest-chart.component';
 // import { PostComponent }           from './post/post.component';
 // import { PostListComponent }       from './post-list/post-list.component';
 
@@ -37,7 +38,8 @@ import { BenefitsComponent }       from './benefits/benefits.component';
     AemRequestComponent,
     SafeHtmlPipe,
     WelcomeComponent,
-    BenefitsComponent
+    BenefitsComponent,
+    CompoundInterestChartComponent
     //PostComponent,
     //PostListComponent,
   ],
@@ -45,7 +47,8 @@ import { BenefitsComponent }       from './benefits/benefits.component';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NvD3Module
   ],
   providers: [
     //AemService
