@@ -7,12 +7,14 @@ import { BlankPageComponent }      from './blank-page/blank-page.component';
 import { AemRequestComponent }     from './aem-request/aem-request.component';
 import { WelcomeComponent }        from './welcome/welcome.component';
 import { BenefitsComponent }       from './benefits/benefits.component';
+import { CoffeeSavingsComponent }       from './coffee-savings/coffee-savings.component';
 
 const appRoutes: Routes = [
   { path: 'welcome', component: WelcomeComponent },
   { path: 'aem-request', component: AemRequestComponent },
   { path: 'print-form', component: PrintFormComponent },
   { path: 'compound-interest', component: CompoundInterestChartComponent },
+  { path: 'coffee-savings', component: CoffeeSavingsComponent },
   { path: 'benefits', component: BenefitsComponent },
   { path: 'blank-page', component: BlankPageComponent },
   { path: '',   redirectTo: '/welcome', pathMatch: 'full' },
