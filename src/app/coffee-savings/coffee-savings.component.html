@@ -1,0 +1,49 @@
+<h1> Coffee Savings</h1>
+<p>If you invested the ammount you spend on coffee daily, what happens?</p>
+
+<form>
+<div>
+  <label>How many cups do you drink daily?</label><br>
+  <!-- <input type="range" max="10" min="0" #numberOfCups  /> -->
+  <md-slider #numberOfCups
+    (change)="calcCoffeeSavings(numberOfCups.value, numberOfYears.value)"
+    [value]="2"
+    [max]="5"
+    [min]="1"
+    [step]="1"
+    [tick-interval]="2">
+  </md-slider>
+  <strong>{{ numberOfCups.value }} cups of coffee per day.</strong>
+</div>
+<div>
+  <label>How many years until you retire?</label><br>
+  <md-slider #numberOfYears
+    (change)="calcCoffeeSavings(numberOfCups.value, numberOfYears.value)"
+    [value]="20"
+    [max]="30"
+    [min]="10"
+    [step]="1"
+    [tick-interval]="5">
+  </md-slider>
+  <!-- <input type="range" max="40" min="10"   />  -->
+  <strong>{{ numberOfYears.value }} years</strong>
+</div>
+
+<div>
+  <h3>You'll have saved ${{ totalSavings }}</h3>
+  <h3>With weekly compounding interest at 5% that would equal <strong>{{ futureValue }}</strong></h3>
+  <p>That's some serious Joe</p>
+</div>
+</form>
+<!--
+A = P ( 1 + r / n ) ^nt
+
+A = value after t periods
+
+P = principal amount (initial investment)
+
+r = annual nominal interest rate (not reflecting the compounding)
+
+n = number of times the interest is compounded per year
+
+t = number of years the money is borrowed for -->
